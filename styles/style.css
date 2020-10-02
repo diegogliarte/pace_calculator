@@ -1,0 +1,112 @@
+body {
+    background-color: #1f1f1f;
+}
+
+/* Hide Arrows in Number Types */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.title {
+  text-align: center;
+  color: #efefef;
+  font-size: 24px;
+  font-family: 'Nova Flat', cursive;
+  overflow: visible;
+}
+
+.container {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#wrapper-input {
+  background-color: #efefef;
+  width: 500px;
+  border-radius: 10px;
+  padding: 10px;
+  color: #1f1f1f;
+  font-size: 32px;
+  font-family: 'Nova Flat', cursive;
+  font-weight: 650;
+}
+
+#wrapper-time, #wrapper-distance, #wrapper-pace  {
+  position: relative;
+  right: 30px;
+  margin: 2px;
+}
+
+label {
+  cursor: pointer;
+}
+
+.option-radio {
+  visibility:hidden;
+}
+
+#wrapper-time > .inputs{
+  position: relative;
+  left: 60px;
+}
+
+#wrapper-pace > .inputs,#wrapper-pace > .button{
+  position: relative;
+  left: 60px;
+}
+
+.inputs {
+  width: 75px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 24px;
+  text-align: center;
+  margin: 5px; 
+}
+
+ /* Initializes with this parameter the pace inputs*/
+.pace.inputs {
+  background-color: lightgrey;
+  font-weight: bold;
+}
+
+.button {
+  bottom: 5px;
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  border-style: none;
+  background-color: #1f1f1f;
+  color: #efefef;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:focus {outline:0;}
+
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #3f3f3f radial-gradient(circle, transparent 1%, #3f3f3f 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #5f5f5f;
+  background-size: 100%;
+  transition: background 0s;
+}
+

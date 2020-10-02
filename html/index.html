@@ -1,0 +1,51 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Pace Calculator</title>
+  <meta name="author" content="diegogliarte">
+  <link rel="stylesheet" href="/styles/style.css">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+
+  
+</head>
+
+<body>
+    <div class="title">
+        <h1>Pace Calculator</h1>
+    </div>
+
+    <div class="container">
+      <div id="wrapper-input">  
+        <div id="wrapper-time">
+          <input class="option-radio" class="option" type="radio" id="radio-time" name="calculate" value="time">
+          <label for="radio-time">Time</label>
+          <input type="number" class="time inputs" id="input-time-hours" min="0" placeholder="h">
+          <input type="number" class="time inputs" id="input-time-minutes" min="0" placeholder="m">
+          <input type="number" class="time inputs" id="input-time-seconds" min="0" placeholder="s">
+        </div>
+
+        <div id="wrapper-distance">
+          <input class="option-radio" type="radio" id="radio-distance" name="calculate" value="distance">
+          <label for="radio-distance">Distance</label>
+          <input type="number" class="distance inputs" id="input-distance" min="0">
+          <button onclick="toggle('distance');recalculate();" class="button distance ripple">Km</button> 
+        </div>
+
+        <div id="wrapper-pace">
+          <input class="option-radio" type="radio" id="radio-pace" name="calculate" value="pace" checked>
+          <label for="radio-pace">Pace</label>
+          <input type="number" class="pace inputs" id="input-pace-hours" disabled min="0" placeholder="h">
+          <input type="number" class="pace inputs" id="input-pace-minutes" disabled min="0" placeholder="m"> 
+          <input type="number" class="pace inputs" id="input-pace-seconds" disabled min="0" placeholder="s">
+          <button onclick="toggle('pace');recalculate();" class="button pace ripple">Km</button> 
+        </div>  
+      </div>
+    </div>
+</body>
+
+<script src="/scripts/script.js"></script>
