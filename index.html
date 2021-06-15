@@ -4,11 +4,12 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Pace Calculator</title>
+  <title>Running Calculator</title>
   <meta name="author" content="diegogliarte">
   <link rel="stylesheet" href="assets/styles/style.css">
   <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 
   
@@ -16,36 +17,78 @@
 
 <body>
     <div class="title">
-        <h1>Pace Calculator</h1>
+        <h1>Running Calculator</h1>
     </div>
 
     <div class="container">
       <div id="wrapper-input">  
-        <div id="wrapper-time">
+        <div class="wrapper-row" id="wrapper-time">
           <input class="option-radio" class="option" type="radio" id="radio-time" name="calculate" value="time">
-          <label for="radio-time">Time</label>
-          <input type="number" class="time inputs" id="input-time-hours" min="0" placeholder="h">
-          <input type="number" class="time inputs" id="input-time-minutes" min="0" placeholder="m">
-          <input type="number" class="time inputs" id="input-time-seconds" min="0" placeholder="s">
+          <label class="text-radio" id="radio-time-text" for="radio-time" tabindex="1">Time</label>
+		  <div class="container-inputs">
+			  <input type="number" class="calculator time inputs" id="input-time-hours" min="0" placeholder="h">:
+			  <input type="number" class="calculator time inputs" id="input-time-minutes" min="0" placeholder="m">:
+			  <input type="number" class="calculator time inputs" id="input-time-seconds" min="0" placeholder="s">
+		  </div>
         </div>
 
-        <div id="wrapper-distance">
+        <div class="wrapper-row" id="wrapper-distance">
           <input class="option-radio" type="radio" id="radio-distance" name="calculate" value="distance">
-          <label for="radio-distance">Distance</label>
-          <input type="number" class="distance inputs" id="input-distance" min="0">
-          <button onclick="toggle('distance');recalculate();" class="button distance ripple">Km</button> 
+          <label class="text-radio" id="radio-distance-text" for="radio-distance" tabindex="2">Distance</label>
+		  <div class="container-inputs">
+			  <input type="number" class="calculator distance inputs" id="input-distance" min="0" placeholder="km">
+		  </div>
         </div>
 
-        <div id="wrapper-pace">
+        <div class="wrapper-row" id="wrapper-pace">
           <input class="option-radio" type="radio" id="radio-pace" name="calculate" value="pace" checked>
-          <label for="radio-pace">Pace</label>
-          <input type="number" class="pace inputs" id="input-pace-hours" disabled min="0" placeholder="h">
-          <input type="number" class="pace inputs" id="input-pace-minutes" disabled min="0" placeholder="m"> 
-          <input type="number" class="pace inputs" id="input-pace-seconds" disabled min="0" placeholder="s">
-          <button onclick="toggle('pace');recalculate();" class="button pace ripple">Km</button> 
+          <label class="text-radio" id="radio-pace-text" for="radio-pace" tabindex="3">Pace</label>
+		  <div class="container-inputs">
+			  <input type="number" class="calculator pace inputs" id="input-pace-hours" disabled min="0" placeholder="h">:
+			  <input type="number" class="calculator pace inputs" id="input-pace-minutes" disabled min="0" placeholder="m">:
+			  <input type="number" class="calculator pace inputs" id="input-pace-seconds" disabled min="0" placeholder="s">
+		  </div>
         </div>  
       </div>
     </div>
+	<div class="title">
+        <h1>Unit Converter</h1>
+    </div>
+	<div class="container">
+		<div id="wrapper-input">  
+			<div class="wrapper-converter" id="wrapper-converter-speed">
+				<div class="converter-div">
+					<input type="number" class="converter inputs speed" id="converter-speed-km" min="0" placeholder="0">Km/h
+				</div>
+				<span>to</span>
+				<div class="converter-div">
+					<input type="number" class="converter inputs speed" id="converter-speed-mi" min="0" placeholder="0">Mi/h
+				</div>
+			</div>
+			
+			<div class="wrapper-converter" id="wrapper-converter-distance">
+				<div class="converter-div">
+					<input type="number" class="converter inputs distance" id="converter-distance-km" min="0" placeholder="0">Km
+				</div>
+				<span>to</span>
+				<div class="converter-div">
+					<input type="number" class="converter inputs distance" id="converter-distance-mi" min="0" placeholder="0">Mi
+				</div>		   
+			</div>
+			<div class="wrapper-converter" id="wrapper-converter-pace">
+				<div class="converter-div">
+					<input type="number" class="converter inputs pace" id="converter-pace-km-m" min="0" placeholder="0">:
+					<input type="number" class="converter inputs pace" id="converter-pace-km-s" min="0" placeholder="00">min/Km
+				</div>
+				<span>to</span>
+				<div class="converter-div">
+					<input type="number" class="converter inputs pace" id="converter-pace-mi-m" min="0" placeholder="0">:
+					<input type="number" class="converter inputs pace" id="converter-pace-mi-s" min="0" placeholder="00">min/Mi
+				</div>		   
+			</div>	 
+		</div>
+    </div>
+	
 </body>
 
 <script src="assets/scripts/script.js"></script>
